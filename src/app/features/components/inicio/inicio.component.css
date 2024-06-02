@@ -1,0 +1,35 @@
+.inicio {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, rgb(0, 0, 0, 0.5), rgb(67, 67, 67, 0.5)),
+    url(../../../../assets/images/inicio.jpg);
+  background-size: cover;
+  background-position-y: center;
+  min-height: 89.6vh;
+}
+
+.inicio__content {
+  width: 100%;
+  padding: 5rem;
+  padding-left: 8rem;
+  color: #fff;
+}
+
+.inicio__content h1 {
+  margin-top: 5rem;
+  font-size: 5rem;
+}
+
+.inicio__content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.inicio__content p {
+  font-size: 1.5rem;
+}
+
+.inicio__content a {
+  color: #fff;
+  text-decoration: none;
+}

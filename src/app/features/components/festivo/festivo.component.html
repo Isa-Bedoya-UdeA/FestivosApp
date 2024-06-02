@@ -1,0 +1,60 @@
+<mat-toolbar class="title" color="primary">
+  <h2>Festivos</h2>
+</mat-toolbar>
+
+<section class="section">
+  <div class="verificar">
+    <h3>Verificar Festivo</h3>
+    <div class="container">
+      <mat-form-field class="verificar__date">
+        <mat-label>Seleccione una fecha</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          [(ngModel)]="fechaSeleccionada"
+        />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <button mat-flat-button color="primary" (click)="verificar()">
+        Validar Fecha
+      </button>
+    </div>
+  </div>
+
+  <div class="listar">
+    <h3>Listar Festivos del año {{ year }}</h3>
+    <div class="container">
+      <mat-form-field class="listar__year">
+        <mat-label>Escriba un año</mat-label>
+        <input
+          matInput
+          placeholder="Ejm. 2024"
+          [(ngModel)]="year"
+          type="number"
+        />
+      </mat-form-field>
+      <button mat-flat-button color="primary" (click)="listar()">
+        Obtener Festivos
+      </button>
+    </div>
+  </div>
+</section>
+
+<div>
+  <ngx-datatable
+    class="dark"
+    [rows]="festivos"
+    [columns]="columnas"
+    [rowHeight]="'auto'"
+    [columnMode]="modoColumna.force"
+    [limit]="10"
+    [headerHeight]="50"
+    [footerHeight]="50"
+  >
+  </ngx-datatable>
+</div>
