@@ -33,3 +33,21 @@
   color: #fff;
   text-decoration: none;
 }
+
+@media screen and (max-width: 600px) {
+  .inicio__content {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inicio__content h1 {
+    text-align: center;
+  }
+
+  .inicio {
+    padding-bottom: 4rem;
+  }
+}
